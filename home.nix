@@ -30,6 +30,7 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+vim
     nitch
 
     # archives
@@ -72,8 +73,10 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+swww
   ];
-
+  
+  
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
@@ -102,10 +105,25 @@ decoration = {
  bind = [
    "SUPER,Q,killactive"
    "SUPER,Return,exec,kitty"
+
+   #window
+   "SUPER SHIFT,Right, movewindow , r"
+   "SUPER SHIFT,Left, movewindow , l"
+   "SUPER ,Left, movefocus , l"
+   "SUPER ,Right, movefocus , r"
+
  
 ];
+
+exec-once= [
+"swww-daemon"
+"swww img /home/akerman/.dotfiles/nix-config/wallpaper.png"
+];
+
 };
    };
+ 
+
 
 
 
