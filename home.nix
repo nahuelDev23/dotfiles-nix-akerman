@@ -31,6 +31,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
 networkmanagerapplet
+firefox
 vim
     nitch
 
@@ -84,7 +85,7 @@ programs.waybar = {
       layer = "top";
       position = "top";
       height = 30;
-      output = [ "eDP-1" ];
+      output = [ "DP-2" ];
       modules-left = [ "network" ];
       modules-center = [ "hyprland/workspaces" ]; # Aquí agregamos los workspaces centrados
       modules-right = [ "temperature" ];
@@ -190,8 +191,8 @@ decoration = {
 
 exec-once= [
 "swww-daemon"
-"swww img /home/akerman/.dotfiles/nix-config/wallpaper.png"
-"waybar"
+"swww img /home/akerman/.dotfiles/dotfiles-nix-akerman/wallpaper.png"
+"sleep 1 waybar"
 ];
 
 };
