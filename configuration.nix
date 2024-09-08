@@ -22,7 +22,12 @@ boot.loader.efi.canTouchEfiVariables=true;
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+#docker
+virtualisation.docker.enable = true;
+virtualisation.docker.rootless = {
+  enable = true;
+  setSocketVariable = true;
+};
   # Set your time zone.
   time.timeZone = "America/Argentina/Salta";
 
@@ -51,7 +56,7 @@ boot.loader.efi.canTouchEfiVariables=true;
   users.users.akerman = {
     isNormalUser = true;
     description = "akerman";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker"];
     packages = with pkgs; [];
   };
 

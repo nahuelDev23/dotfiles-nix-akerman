@@ -27,9 +27,10 @@
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
   };
-
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+docker 
+docker-compose
 networkmanagerapplet
 firefox
 vim
@@ -242,7 +243,7 @@ exec-once= [
  
 
 
-
+ 
 
    home.stateVersion = "24.05";
 
