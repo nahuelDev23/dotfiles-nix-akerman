@@ -30,7 +30,6 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-networkmanagerapplet
 vim
     nitch
 
@@ -77,76 +76,39 @@ vim
 swww
   ];
 
-programs.waybar = {
-  enable = true;
-  settings = {
-    mainBar = {
-      layer = "top";
-      position = "top";
-      height = 30;
-      output = [ "eDP-1" ];
-      modules-left = [ "network" ];
-      modules-center = [ "hyprland/workspaces" ]; # Aquí agregamos los workspaces centrados
-      modules-right = [ "temperature" ];
 
-      "hyprland/workspaces" = {
-        format = "{icon}";  # Formato de icono
-        on-click = "activate";  # Acción al hacer clic en un workspace
-        format-icons = {
-          "1" = "●";  # Íconos circulares para los workspaces
-          "2" = "●";
-          "3" = "●";
-          "4" = "●";
-          "5" = "●";
-          "urgent" = "";  # Icono para workspaces urgentes
-          "active" = "●";  # Icono para el workspace activo
-          "default" = "○";  # Icono predeterminado para otros workspaces
-        };
-        sort-by-number = true;  # Ordenar por número
-        persistent-workspaces = {
-          "1" = [];  # Siempre mostrar workspace 1
-          "2" = [];
-          "3" = [];
-          "4" = [];
-          "5" = [];
-        };
-      };
+  
+  programs.waybar ={
+enable=true;
+settings ={
+ mainBar = {
+    layer = "top";
+    position = "top";
+    height = 30;
+    output = [
+      "eDP-1"
+    ];
+    modules-left = [ "sway/workspaces" "sway/mode" "wlr/taskbar" ];
+    modules-center = [ "sway/window" "custom/hello-from-waybar" ];
+    modules-right = [ "mpd" "custom/mymodule#with-css-id" "temperature" ];
+
+    "sway/workspaces" = {
+      disable-scroll = true;
+      all-outputs = true;
+    };
+    "custom/hello-from-waybar" = {
+      format = "hello {}";
+      max-length = 40;
+      interval = "once";
+      exec = pkgs.writeShellScript "hello-from-waybar" ''
+        echo "from within waybar"
+      '';
     };
   };
+};
 
-  style = ''
-    * {
-      border: none;
-      border-radius: 0;
-      font-family: Source Code Pro;
-    }
-    window#waybar {
-background:transparent;
-    }
-#workspaces {
-      margin:1rem;
-      border-radius:4px;
-      background: #6B2A71; /* violeta goku black*/
-}
-    #workspaces button {
-      margin-right:1rem; 
-      color: #AAB2BF;
-      border-radius: 50%;  
-    } 
-#workspaces button:last-child {
-      margin-right:0px; 
-    }
-
-    #workspaces button.active {
-      color: #E91E63; /* rosa goku black*/
-    }
-    #workspaces button:hover {
-background:none;
-box-shadow:none;
-    }
-  '';
-};  
-   # basic configuration of git, please change to your own
+};
+  # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
     userName = "nahuelDev23";
@@ -178,12 +140,8 @@ decoration = {
    #window
    "SUPER SHIFT,Right, movewindow , r"
    "SUPER SHIFT,Left, movewindow , l"
-   "SUPER ,Left, movefocus , l" #move window to left
-   "SUPER ,Right, movefocus , r" #move window to right
-   "SUPER,1,workspace,1" # go to workspace 1
-   "SUPER,2,workspace,2" # go to workspace 2
-   "SUPER SHIFT,1,movetoworkspace,1" # go current window to workspace 1
-   "SUPER SHIFT,2,movetoworkspace,2" # go currnte window to workspace 2
+   "SUPER ,Left, movefocus , l"
+   "SUPER ,Right, movefocus , r"
 
  
 ];
