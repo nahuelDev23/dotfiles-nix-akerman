@@ -228,7 +228,7 @@ decoration = {
    "SUPER SHIFT,3,movetoworkspace,3" # go currnte window to workspace 2
    "SUPER SHIFT,4,movetoworkspace,4" # go currnte window to workspace 2
    "SUPER SHIFT,5,movetoworkspace,5" # go currnte window to workspace 2
-
+   "SUPER,G,exec,firefox https://chat.openai.com/"    #Open ChatGPT
  
 ];
 
