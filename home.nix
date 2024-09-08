@@ -242,7 +242,13 @@ exec-once= [
    };
  
 
+programs.fish={
+enable=true;
+};
 
+programs.zoxide={
+enable=true;
+};
  
 
    home.stateVersion = "24.05";

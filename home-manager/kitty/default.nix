@@ -11,6 +11,7 @@ font = {
 };
 extraConfig ="
  background_opacity 0.8
+shell fish
 ";
 };
 
