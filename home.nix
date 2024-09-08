@@ -78,6 +78,38 @@ vim
 swww
   ];
 
+programs.wofi = {
+ enable=true;
+settings ={
+  width=700;
+};
+style = "
+#window{
+ background:rgba(0,0,0,1);
+ border-radius:10px;
+}
+#text {
+color:white;
+}
+#outer-box {
+padding:1rem;
+}
+#input {
+ background:rgba(0,0,0,1);
+ border-radius:4px;
+  border:1px solid white;
+margin-bottom:1rem;
+}
+
+#entry:selected{
+padding:1rem;
+border-radius:4px;
+background: linear-gradient(to right, #6B2A71, #E91E63);
+}
+
+";
+};
+
 programs.waybar = {
   enable = true;
   settings = {
@@ -174,6 +206,7 @@ decoration = {
       };
  bind = [
    "SUPER,Q,killactive"
+   "SUPER,D,exec,wofi --show drun"
    "SUPER,Return,exec,kitty"
 
    #window
@@ -181,10 +214,19 @@ decoration = {
    "SUPER SHIFT,Left, movewindow , l"
    "SUPER ,Left, movefocus , l" #move window to left
    "SUPER ,Right, movefocus , r" #move window to right
-   "SUPER,1,workspace,1" # go to workspace 1
-   "SUPER,2,workspace,2" # go to workspace 2
+   "SUPER ,Down, movefocus , d" #move window to bottom
+   "SUPER ,Up, movefocus , u" #move window to top
+   "SUPER ,1,workspace,1" # go to workspace 1
+   "SUPER ,2,workspace,2" # go to workspace 2
+   "SUPER ,3,workspace,3" # go to workspace 2
+   "SUPER ,4,workspace,4" # go to workspace 2
+   "SUPER ,5,workspace,5" # go to workspace 2
    "SUPER SHIFT,1,movetoworkspace,1" # go current window to workspace 1
    "SUPER SHIFT,2,movetoworkspace,2" # go currnte window to workspace 2
+   ## 3 al 5 no andan
+   "SUPER SHIFT,3,movetoworkspace,3" # go currnte window to workspace 2
+   "SUPER SHIFT,4,movetoworkspace,4" # go currnte window to workspace 2
+   "SUPER SHIFT,5,movetoworkspace,5" # go currnte window to workspace 2
 
  
 ];
