@@ -234,7 +234,7 @@ decoration = {
 exec-once= [
 "swww-daemon"
 "swww img /home/akerman/.dotfiles/dotfiles-nix-akerman/wallpaper.png"
-"sleep 1 waybar"
+"waybar"
 ];
 
 };
