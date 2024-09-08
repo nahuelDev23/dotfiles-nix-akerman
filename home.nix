@@ -119,7 +119,7 @@ programs.waybar = {
       position = "top";
       height = 30;
       output = [ "DP-2" ];
-      modules-left = [ "network" ];
+      modules-left = [ "clock" ];
       modules-center = [ "hyprland/workspaces" ]; # Aquí agregamos los workspaces centrados
       modules-right = [ "temperature" ];
 
@@ -145,8 +145,16 @@ programs.waybar = {
           "5" = [];
         };
       };
-    };
-  };
+
+"clock" = {
+  interval = 60;
+  format = "{:%d %b %H:%M}";  # Muestra el día y el mes en forma corta
+  locale = "es_AR.UTF-8";
+  tooltip = true;
+  tooltip-format = "{:%Y-%m-%d}";  # Muestra la fecha completa en el tooltip
+};
+};
+};
 
   style = ''
     * {
@@ -154,11 +162,15 @@ programs.waybar = {
       border-radius: 0;
       font-family: Source Code Pro;
     }
-    window#waybar {
+
+    window#waybar { 
+
 background:transparent;
     }
 #workspaces {
-      margin:1rem;
+      margin-top:.4rem;
+      margin-bottom:.4rem;
+
       border-radius:4px;
       background: #6B2A71; /* violeta goku black*/
 }
@@ -178,6 +190,17 @@ background:transparent;
 background:none;
 box-shadow:none;
     }
+
+#clock {
+ padding:.5rem;
+ margin-left:1rem;
+ 
+      margin-top:.4rem;
+      margin-bottom:.4rem;
+ color:white;
+ border-radius:4px;
+ background: #6B2A71; /* violeta goku black*/
+}
   '';
 };  
    # basic configuration of git, please change to your own
