@@ -85,7 +85,7 @@
   enable=true;
  };
  home.file.".config/nvim/" = {
-source=~/.dotfiles/dotfiles-nix-akerman/home-manager/nvim;
+source=home-manager/nvim;
 recursive=true;
 };
   programs.wofi = {
