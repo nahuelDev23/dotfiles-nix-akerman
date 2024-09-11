@@ -34,6 +34,8 @@
   home.packages = with pkgs; [
   #file manager terminal
   ranger
+#para q ranger vea fotos
+  w3m
     cava
     docker
     docker-compose
