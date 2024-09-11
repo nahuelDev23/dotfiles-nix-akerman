@@ -84,8 +84,8 @@
  programs.neovim ={
   enable=true;
  };
- home.file."~/.config/nvim/" = {
-source=./nvim;
+ home.file.".config/nvim/" = {
+source=./home-manager/nvim;
 recursive=true;
 };
   programs.wofi = {
