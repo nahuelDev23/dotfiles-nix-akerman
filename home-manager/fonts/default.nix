@@ -1,23 +1,11 @@
 {
-  pkgs,
-  ...
-}: {
-fonts.fontconfig.enable = true;
-  # Incluir el paquete de Iosevka Nerd Font
-  home.packages = with pkgs; [
-    nerd-fonts-iosevka
-  ];
+pkgs,
+...
+}:{
+fonts.fontconfig.enable=true;
 
-  # Configurar las fuentes para Iosevka Nerd Font
-  fonts = {
-    enable = true;
+home.packages = with pkgs; [
+victor-mono
 
-    # Definir las fuentes adicionales
-    fontDirs = [
-      "${pkgs.nerd-fonts-iosevka}/share/fonts"
-    ];
-
-    # Especificar las fuentes preferidas para monospace y nerd fonts
-     };
+];
 }
-
