@@ -27,6 +27,7 @@
 home.file."~/.config/nvim" = {
 source=./home-manager/nvim;
 recursive=true;
+executable=true;
 };
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
@@ -36,6 +37,7 @@ recursive=true;
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+neovim
     cava
     docker
     docker-compose
