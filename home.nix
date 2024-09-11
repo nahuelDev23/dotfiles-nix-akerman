@@ -32,7 +32,6 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-neovim
     cava
     docker
     docker-compose
@@ -82,7 +81,9 @@ neovim
     swww
   ];
 
- 
+ programs.neovim ={
+  enable=true;
+ };
  home.file."~/.config/nvim/" = {
 source=./home-manager/nvim;
 recursive=true;
