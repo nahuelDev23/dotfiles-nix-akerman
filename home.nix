@@ -35,6 +35,7 @@
   #file manager terminal
 #para q ranger vea fotos
   w3m
+ntfs-3g
     cava
     docker
     docker-compose
