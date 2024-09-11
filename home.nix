@@ -24,10 +24,9 @@
     ./home-manager/waybar
   ];
  
-home.file."~/.config/nvim" = {
+home.file.".config/nvim" = {
 source=./home-manager/nvim;
 recursive=true;
-executable=true;
 };
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
