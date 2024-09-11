@@ -6,8 +6,8 @@ programs.kitty = {
  enable = true;
   shellIntegration.enableFishIntegration = true;
 font = {
- name= "Victor Mono DemiBold";
- size=18;
+ name= "IosevkaTerm Nerd Font";
+ size=16;
 };
 extraConfig ="
  background_opacity 0.8
