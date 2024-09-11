@@ -5,6 +5,6 @@ pkgs,
 fonts.fontconfig.enable=true;
 
 home.packages = with pkgs; [
-    (pkgs.nerdfonts.override { fonts = [ "IosevkaNerdFont" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "IosevkaTerm" ]; })
 ];
 }
