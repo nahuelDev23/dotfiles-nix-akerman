@@ -15,7 +15,7 @@ in
         layer = "top";
         position = "top";
         height = 30;
-        output = [ "DVI-I-1" ];
+        output = [ "DVI-I-1" "DP-2" ];
         modules-left = [ "clock" "custom/cava"];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [ ];
@@ -49,6 +49,7 @@ in
           locale = "es_AR.UTF-8";
           tooltip = true;
           tooltip-format = "{:%Y-%m-%d}";
+          timezone= "America/Argentina/Buenos_Aires";
         };
 
 
