@@ -18,11 +18,6 @@ fonts.fontconfig.enable = true;
     ];
 
     # Especificar las fuentes preferidas para monospace y nerd fonts
-    fontconfig = {
-      settings = {
-        "monospace" = [ "Iosevka Nerd Font" ];
-      };
-    };
-  };
+     };
 }
 
