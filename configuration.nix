@@ -29,7 +29,7 @@ virtualisation.docker.rootless = {
   setSocketVariable = true;
 };
   # Set your time zone.
-  time.timeZone = "America/Argentina/Salta";
+  time.timeZone = "America/Argentina/Buenos_Aires";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -68,6 +68,7 @@ virtualisation.docker.rootless = {
   environment.systemPackages = with pkgs; [
   xdg-utils
   gcc
+  cargo
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
