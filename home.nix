@@ -32,6 +32,8 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+  #file manager terminal
+  ranger
     cava
     docker
     docker-compose
