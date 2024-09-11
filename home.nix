@@ -130,9 +130,8 @@ recursive=true;
   programs.fish = {
     enable = true;
     shellAliases ={
-
-        "ls" = "eza -TL 2"
-      }
+        "ls" = "eza -TL 2";
+      };
   };
 
   programs.zoxide = {
