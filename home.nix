@@ -33,7 +33,6 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
   #file manager terminal
-  ranger
 #para q ranger vea fotos
   w3m
     cava
@@ -137,11 +136,16 @@ recursive=true;
         "ls" = "eza -TL 2";
       };
   };
+ programs.ranger = {
+    enable=true;
+    settings ={
+    preview_images = true;
 
+      };
+  };
   programs.zoxide = {
     enable = true;
   };
-
   home.stateVersion = "24.05";
 
   # Let home Manager install and manage itself.
