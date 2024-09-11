@@ -2,8 +2,6 @@
   pkgs,
   ...
 }: {
-  # Habilitar fontconfig
-  fonts.fontconfig.enable = true;
 
   # Incluir el paquete de Iosevka Nerd Font
   home.packages = with pkgs; [
