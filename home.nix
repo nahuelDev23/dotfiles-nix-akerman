@@ -23,11 +23,7 @@
     ./home-manager/hypr
     ./home-manager/waybar
   ];
- 
- home.file."./.config/nvim/" = {
-source=./home-manager/nvim;
-recursive=true;
-};
+
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xcursor.size" = 16;
@@ -86,6 +82,11 @@ neovim
     swww
   ];
 
+ 
+ home.file."~/.config/nvim/" = {
+source=./home-manager/nvim;
+recursive=true;
+};
   programs.wofi = {
     enable = true;
     settings = {
