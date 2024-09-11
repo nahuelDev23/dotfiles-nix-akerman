@@ -39,7 +39,8 @@
     firefox
     vim
     nitch
-
+    #alternativa a cat 
+    bat
     # archives
     zip
     xz
@@ -128,6 +129,10 @@ recursive=true;
 
   programs.fish = {
     enable = true;
+    shellAliases ={
+
+        "ls" = "eza -TL 2"
+      }
   };
 
   programs.zoxide = {
