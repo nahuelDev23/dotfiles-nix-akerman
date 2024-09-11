@@ -21,8 +21,13 @@
     ./home-manager/kitty
     ./home-manager/fonts
     ./home-manager/hypr
+    ./home-manager/waybar
   ];
-
+ 
+home.file.".config/nvim" = {
+source=./home-manager/nvim;
+recursive=true;
+};
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xcursor.size" = 16;
@@ -110,115 +115,6 @@
     ";
   };
 
-  programs.waybar = {
-    enable = true;
-    settings = {
-      mainBar = {
-        layer = "top";
-        position = "top";
-        height = 42;
-        output = [ "DP-2" ];
-        modules-left = [ "clock" "custom/cava" ];
-        modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ ];
-
-        "hyprland/workspaces" = {
-          format = "{icon}";
-          on-click = "activate";
-          format-icons = {
-            "1" = "●";
-            "2" = "●";
-            "3" = "●";
-            "4" = "●";
-            "5" = "●";
-            "urgent" = "";
-            "active" = "●";
-            "default" = "○";
-          };
-          sort-by-number = true;
-          persistent-workspaces = {
-            "1" = [];
-            "2" = [];
-            "3" = [];
-            "4" = [];
-            "5" = [];
-          };
-        };
-
-        "clock" = {
-          interval = 60;
-          format = "{:%d %b %H:%M}";
-          locale = "es_AR.UTF-8";
-          tooltip = true;
-          tooltip-format = "{:%Y-%m-%d}";
-        };
-
-"custom/cava"= {
-    "exec"= "bash ~/.dotfiles/dotfiles-nix-akerman/cava.sh";
-    "format"="{}";
-};
-
-
-
-
-      };
-    };
-
-    style = ''
-      * {
-        border: none;
-        border-radius: 0;
-        font-family: Source Code Pro;
-      }
-#custom-cava {
-    color: #8FBC8F;
-    border-left: 0px;
-    border-right: 0px;
-    padding-bottom: 6px;
-    font-family: "bargraph";
-    font-size: 22px;
-}
-      window#waybar {
-        background: transparent;
-      }
-
-      #workspaces {
-        margin-top: .4rem;
-        margin-bottom: .4rem;
-        border-radius: 4px;
-        background: #6B2A71;  /* violeta goku black */
-      }
-
-      #workspaces button {
-        margin-right: 1rem;
-        color: #AAB2BF;
-        border-radius: 50%;
-      }
-
-      #workspaces button:last-child {
-        margin-right: 0px;
-      }
-
-      #workspaces button.active {
-        color: #E91E63;  /* rosa goku black */
-      }
-
-      #workspaces button:hover {
-        background: none;
-        box-shadow: none;
-      }
-
-      #clock {
-        padding: .5rem;
-        margin-left: 1rem;
-        margin-top: .4rem;
-        margin-bottom: .4rem;
-        color: white;
-        border-radius: 4px;
-        background: #6B2A71;  /* violeta goku black */
-      }
-    '';
-  };
 
   # basic configuration of git, please change to your own
   programs.git = {
