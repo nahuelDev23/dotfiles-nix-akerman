@@ -67,6 +67,7 @@ virtualisation.docker.rootless = {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   xdg-utils
+  gcc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
