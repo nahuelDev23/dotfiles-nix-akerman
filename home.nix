@@ -33,9 +33,10 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
   keepassxc
-  #file 
+  nodejs
+ #filemanger super+o
   gnome.nautilus
-
+yazi
     cava
     docker
     docker-compose
@@ -137,6 +138,7 @@ recursive=true;
     enable = true;
     shellAliases ={
         "ls" = "eza -TL 2";
+        "yz" = "yazi";
       };
   };
 
