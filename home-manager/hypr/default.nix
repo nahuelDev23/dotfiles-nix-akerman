@@ -1,5 +1,5 @@
 { pkgs, config, ... }:
-
+# puedo poner en config un objeto onda config.colorScheme.colors
 let
   modifier = "SUPER"; in {
   wayland.windowManager.hyprland = {
@@ -11,7 +11,7 @@ let
       general ={
 
         border_size= 3;
-        "col.active_border"="0xF1E4CDFF 60deg";
+        "col.active_border"="rgb(F1E4CD) 60deg";
 
         };
       decoration = {
