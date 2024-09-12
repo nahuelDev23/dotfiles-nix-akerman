@@ -32,6 +32,7 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+  keepassxc
   #file 
   gnome.nautilus
 
@@ -84,6 +85,8 @@
     usbutils    # lsusb
     swww
   ];
+
+
 
  programs.neovim ={
   enable=true;

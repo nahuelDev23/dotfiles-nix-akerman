@@ -29,7 +29,10 @@ let
         "${modifier},Q,killactive"
         "${modifier},D,exec,wofi --show drun"
         "${modifier},Return,exec,kitty"
-
+        "${modifier},G,exec,firefox https://chat.openai.com/" # Open ChatGPT
+        "${modifier},Y,exec,firefox https://youtube.com/"   
+        "${modifier},O,exec,nautilus" 
+        "${modifier},K,exec,keepassxc" 
         # Window management
         "${modifier} SHIFT,Right, movewindow , r"
         "${modifier} SHIFT,Left, movewindow , l"
@@ -47,9 +50,8 @@ let
         "${modifier} SHIFT,3,movetoworkspace,3" # Move current window to workspace 3
         "${modifier} SHIFT,4,movetoworkspace,4" # Move current window to workspace 4
         "${modifier} SHIFT,5,movetoworkspace,5" # Move current window to workspace 5
-        "${modifier},G,exec,firefox https://chat.openai.com/" # Open ChatGPT
-        "${modifier},Y,exec,firefox https://youtube.com/"   
-        "${modifier},O,exec,nautilus"   
+
+          
         ];
 
       exec-once = [
