@@ -1,9 +1,7 @@
 { pkgs, config, ... }:
 
 let
-  modifier = "SUPER";
-in
-{
+  modifier = "SUPER"; in {
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
@@ -46,7 +44,9 @@ in
         "${modifier} SHIFT,4,movetoworkspace,4" # Move current window to workspace 4
         "${modifier} SHIFT,5,movetoworkspace,5" # Move current window to workspace 5
         "${modifier},G,exec,firefox https://chat.openai.com/" # Open ChatGPT
-      ];
+        "${modifier},Y,exec,firefox https://youtube.com/"   
+        "${modifier},O,exec,nautilus"   
+        ];
 
       exec-once = [
         "swww-daemon"
