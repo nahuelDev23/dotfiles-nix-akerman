@@ -31,7 +31,6 @@
   };
   # Packages that should be installed to the user profile.
    home.packages = with pkgs; [
-   xwayland
   keepassxc
   nodejs
  #filemanger super+o
