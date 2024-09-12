@@ -4,8 +4,7 @@ let
 primary_color = "#F1E4CD";
 secondary_color = "#1F1F2F";
 border_radius = "7px";
-border_size = "2px";
-in
+border_size = "2px"; in
 {
 
   programs.waybar = {
@@ -93,6 +92,7 @@ in
 padding:0px;
 margin:0px;
       }
+
 .modules-right{
  border: ${border_size} solid ${secondary_color};
 margin-top:1rem;

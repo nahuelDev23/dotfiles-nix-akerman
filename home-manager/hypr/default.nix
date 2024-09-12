@@ -7,14 +7,18 @@ let
     package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
+     settings = {
+      general ={
 
-    settings = {
+        border_size= 3;
+        "col.active_border"="0xF1E4CDFF 60deg";
+
+        };
       decoration = {
-        rounding = 0;
+        rounding = 7;
         drop_shadow = true;
-        shadow_range = 30;
-        shadow_render_power = 3;
-
+        shadow_range = 0;
+        shadow_render_power = 0;
         blur = {
           enabled = true;
           size = 4;
