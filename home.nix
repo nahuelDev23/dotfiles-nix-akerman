@@ -32,9 +32,9 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-  #file manager terminal
-#para q ranger vea fotos
-  w3m
+  #file 
+  gnome.nautilus
+
     cava
     docker
     docker-compose
@@ -136,13 +136,7 @@ recursive=true;
         "ls" = "eza -TL 2";
       };
   };
- programs.ranger = {
-    enable=true;
-    settings ={
-    preview_images = true;
 
-      };
-  };
   programs.zoxide = {
     enable = true;
   };
