@@ -3,21 +3,7 @@
   home.username = "akerman";
   home.homeDirectory = "/home/akerman";
 
-  # link the configuration file in current directory to the specified location in home directory
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
-
-  # link all files in `./scripts` to `~/.config/i3/scripts`
-  # home.file.".config/i3/scripts" = {
-  #   source = ./scripts;
-  #   recursive = true;   # link recursively
-  #   executable = true;  # make all files executable
-  # };
-
-  # encode the file content in nix configuration file directly
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';
-  imports = [
+   imports = [
     ./home-manager/kitty
     ./home-manager/fonts
     ./home-manager/hypr
@@ -34,8 +20,8 @@
   keepassxc
   nodejs
  #filemanger super+o
-  gnome.nautilus
-yazi
+    gnome.nautilus
+    yazi
     cava
     docker
     docker-compose
@@ -84,7 +70,6 @@ yazi
     pciutils    # lspci
     usbutils    # lsusb
     swww
-    discord
 
   ] ;
 programs.direnv = {
