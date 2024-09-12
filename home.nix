@@ -29,9 +29,8 @@
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
   };
-
   # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
+   home.packages = with pkgs; [
   keepassxc
   nodejs
  #filemanger super+o
@@ -80,15 +79,18 @@ yazi
 
     # system tools
     sysstat
-    lm_sensors  # for `sensors` command
+    lm_sensors  # for sensors command
     ethtool
     pciutils    # lspci
     usbutils    # lsusb
     swww
-  ];
+  ] ;
 
-
-
+programs.direnv = {
+      enable = true;
+      enableBashIntegration = true; # see note on other shells below
+      nix-direnv.enable = true;
+    };
  programs.neovim ={
   enable=true;
  };
