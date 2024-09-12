@@ -51,7 +51,7 @@ virtualisation.docker.rootless = {
     layout = "us";
     variant = "";
   };
-
+services.xserver.videoDrivers = ["amd"];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.akerman = {
     isNormalUser = true;

@@ -31,6 +31,7 @@
   };
   # Packages that should be installed to the user profile.
    home.packages = with pkgs; [
+   xwayland
   keepassxc
   nodejs
  #filemanger super+o
@@ -84,8 +85,9 @@ yazi
     pciutils    # lspci
     usbutils    # lsusb
     swww
-  ] ;
+    discord
 
+  ] ;
 programs.direnv = {
       enable = true;
       enableBashIntegration = true; # see note on other shells below
