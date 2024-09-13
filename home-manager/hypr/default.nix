@@ -7,8 +7,10 @@ let
     package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
+  
      settings = {
-      general ={
+           general ={
+
 
         border_size= 3;
         "col.active_border"="rgb(F1E4CD) 60deg";
@@ -50,16 +52,17 @@ let
         "${modifier} SHIFT,3,movetoworkspace,3" # Move current window to workspace 3
         "${modifier} SHIFT,4,movetoworkspace,4" # Move current window to workspace 4
         "${modifier} SHIFT,5,movetoworkspace,5" # Move current window to workspace 5
-
-          
+                 
         ];
-
+     
       exec-once = [
         "swww-daemon"
         "swww img /home/akerman/.dotfiles/dotfiles-nix-akerman/wallpaper.png"
         "waybar"
+        "conky -c /home/akerman/.dotfiles/dotfiles-nix-akerman/conky.conf"
       ];
+ 
     };
-  };
+    };
 }
 
