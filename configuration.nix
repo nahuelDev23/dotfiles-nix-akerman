@@ -68,6 +68,9 @@ virtualisation.docker.rootless = {
   xdg-utils
   gcc
   cargo
+  prettierd
+  typescript 
+  eslint_d
   #gnome.gdm
   ];
 
@@ -101,7 +104,7 @@ services.udisks2.enable = true;
   networking.firewall.allowedUDPPorts = [ 22];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-  sound.enable=true;
+  #sound.enable=true;
   services.pipewire ={
   enable=true;
   alsa.enable=true;
