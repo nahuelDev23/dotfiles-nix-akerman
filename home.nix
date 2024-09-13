@@ -17,6 +17,7 @@
   };
   # Packages that should be installed to the user profile.
    home.packages = with pkgs; [
+   conky
   keepassxc
   nodejs
  #filemanger super+o
@@ -70,7 +71,6 @@
     pciutils    # lspci
     usbutils    # lsusb
     swww
-
   ] ;
 programs.direnv = {
       enable = true;

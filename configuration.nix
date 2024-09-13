@@ -12,14 +12,13 @@
 
   # Bootloader.
    boot.loader.systemd-boot.enable=true;
-boot.loader.efi.canTouchEfiVariables=true;
+   boot.loader.efi.canTouchEfiVariables=true;
   networking.hostName = "akerman"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  #TODO: services.xserver.displayManager.sddm.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -69,6 +68,7 @@ virtualisation.docker.rootless = {
   xdg-utils
   gcc
   cargo
+  #gnome.gdm
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -79,15 +79,23 @@ virtualisation.docker.rootless = {
   #   enableSSHSupport = true;
   # };
   
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  programs.hyprland ={
+      enable=true;
+      xwayland.enable = true;
+    };
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List services that you want to enable:
-
 services.devmon.enable = true;
 services.gvfs.enable = true; 
 services.udisks2.enable = true;
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
   services.xserver.enable=true;
+  services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.displayManager.gdm.wayland = false;
+  services.xserver.desktopManager.gnome.enable = false;
+  services.xserver.displayManager.lightdm.enable = false;  # Activa SDDM
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22];
   networking.firewall.allowedUDPPorts = [ 22];
