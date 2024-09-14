@@ -70,6 +70,8 @@
     pciutils    # lspci
     usbutils    # lsusb
     swww
+    discord
+    dbeaver-bin
   ] ;
 programs.direnv = {
       enable = true;
