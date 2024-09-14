@@ -8,6 +8,7 @@
     ./home-manager/fonts
     ./home-manager/hypr
     ./home-manager/waybar
+    ./home-manager/eww/bt.nix
   ];
 
   # set cursor size and dpi for 4k monitor
@@ -17,7 +18,7 @@
   };
   # Packages that should be installed to the user profile.
    home.packages = with pkgs; [
-   #eww
+   eww
   keepassxc
   nodejs
  #filemanger super+o
@@ -74,6 +75,8 @@
     discord
     dbeaver-bin
   ] ;
+
+
 
 programs.direnv = {
       enable = true;

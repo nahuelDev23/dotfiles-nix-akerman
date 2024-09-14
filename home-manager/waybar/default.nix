@@ -40,9 +40,10 @@ border_size = "2px"; in
         "format-on"= "󰂯";
         "format-off"= "󰂲";
         "format-disabled"= "";
-        "format-connected"= "󰂱  {device_alias}";
-        "tooltip-format-connected"= "{device_enumerate}";
+        "format-connected"= "󰂱  {device_alias} {device_battery_percentage}%";
+        "tooltip-format-connected"= "{device_enumerate}";#
         "tooltip-format-enumerate-connected"= "{device_alias}\t{device_address}";
+         "on-click"= "eww open bluetooth-modal";
     };
       "pulseaudio/slider"= {
       "min"= 0;
