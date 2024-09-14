@@ -11,7 +11,7 @@ let
      settings = {
            general ={
 
-
+        resize_on_border=true;
         border_size= 3;
         "col.active_border"="rgb(FFFD82) 60deg";
        
@@ -53,7 +53,8 @@ let
         "${modifier} SHIFT,3,movetoworkspace,3" # Move current window to workspace 3
         "${modifier} SHIFT,4,movetoworkspace,4" # Move current window to workspace 4
         "${modifier} SHIFT,5,movetoworkspace,5" # Move current window to workspace 5
-
+        "${modifier} , J,resizeactive,10 0 "
+        "${modifier} , H,resizeactive,-10 0 "
         ];
         windowrulev2 =[
           "opacity .9 override,class:^(discord)$"
