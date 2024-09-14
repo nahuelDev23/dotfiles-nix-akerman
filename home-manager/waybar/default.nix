@@ -1,10 +1,10 @@
 {pkgs,config,...}:
 
 let
-primary_color = "#F1E4CD";
-secondary_color = "#1F1F2F";
+colors = import ../../colors.nix;
 border_radius = "7px";
-border_size = "2px"; in
+border_size = "2px"; 
+in
 {
 
   programs.waybar = {
@@ -103,18 +103,18 @@ margin:0px;
       }
 
 .modules-right{
- border: ${border_size} solid ${secondary_color};
+ border: ${border_size} solid ${colors.secondary_color};
 margin-top:1rem;
 margin-right:1rem;
 
 padding:4px;
 border-radius: ${border_radius};
 
-background:${primary_color};
+background:${colors.primary_color};
   }
 .modules-left {
-background:${secondary_color};
-border: ${border_size} solid ${primary_color};
+background:${colors.secondary_color};
+border: ${border_size} solid ${colors.primary_color};
 margin-top:1rem;
 margin-left:1rem;
 
@@ -137,7 +137,7 @@ margin-left:1rem;
 }
 
 #pulseaudio-slider highlight {
-  background: ${secondary_color};
+  background: ${colors.secondary_color};
   border-radius:7px;
 
 }
@@ -148,8 +148,8 @@ margin-left:1rem;
   border-radius:7px;
 }
 #bluetooth{
-  background:${secondary_color};  
-  color:${primary_color};
+  background:${colors.secondary_color};  
+  color:${colors.primary_color};
   margin-left:1rem;
   padding:0 .5rem;
   border-radius:${border_radius}/2;
@@ -157,7 +157,7 @@ margin-left:1rem;
 
 
 #custom-cava {
-    color:${primary_color};
+    color:${colors.primary_color};
     font-family: "bargraph";
     font-size: 1rem;
 margin:0px;
@@ -172,8 +172,8 @@ padding:0px;
       #workspaces {
         margin-top:1rem;
         border-radius: ${border_radius};
-        border:${border_size} solid ${secondary_color};
-        background: ${primary_color};  
+        border:${border_size} solid ${colors.secondary_color};
+        background: ${colors.primary_color};  
 
 padding:4px 16px;
       }
@@ -189,7 +189,7 @@ padding:4px 16px;
       }
 
       #workspaces button.active {
-        color: ${secondary_color};  
+        color: ${colors.secondary_color};  
       }
 
       #workspaces button:hover {
@@ -198,8 +198,8 @@ padding:4px 16px;
       }
 
       #clock {
-        background:${secondary_color};
-        color: ${primary_color};
+        background:${colors.secondary_color};
+        color: ${colors.primary_color};
 
        }
     '';
