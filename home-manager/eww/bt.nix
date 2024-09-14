@@ -1,4 +1,4 @@
-{}:{
+{pkgs,config,...}:{
 
   home.file.".config/eww/eww.yuck".text = ''
   (defpoll bluetooth-devices :interval "1s"
@@ -14,9 +14,17 @@
            :reserve (struts :distance "40px" :side "top")
            :windowtype "dock"
            :wm-ignore false
-           (bluetooth-modal :text  bluetooth-devices ))
+
+           (
+           eventbox :onclick "eww close bluetooth-modal"
+                (bluetooth-modal :text  bluetooth-devices )
+            )
+  )
+
+           
 
   (defwidget bluetooth-modal [?text]
+
     (
       box :class "bluetooth-modal"
           :orientation "v"
@@ -24,13 +32,8 @@
           :spacing "5px"
           :visible true
           text
-        (
-          button 
-          :class "bt-btn"
-          :onclick "eww close bluetooth-modal"
-          "Close"
-        )
-      )
+             )
+    
   ) 
   '';
 
@@ -44,6 +47,9 @@
     font-size: 1rem;
   }
 
-  
+  .bluetooth-modal .bt-btn { 
+     background:#F1E4CD;
+    color: #1F1F2F ;
+    }
   '';
   }
