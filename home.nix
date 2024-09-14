@@ -17,7 +17,6 @@
   };
   # Packages that should be installed to the user profile.
    home.packages = with pkgs; [
-   conky
   keepassxc
   nodejs
  #filemanger super+o

@@ -71,7 +71,6 @@ virtualisation.docker.rootless = {
   prettierd
   typescript 
   eslint_d
-  #gnome.gdm
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -84,7 +83,7 @@ virtualisation.docker.rootless = {
   
   programs.hyprland ={
       enable=true;
-      xwayland.enable = true;
+     xwayland.enable = true;
     };
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List services that you want to enable:

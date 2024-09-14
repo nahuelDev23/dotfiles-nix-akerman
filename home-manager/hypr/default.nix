@@ -59,7 +59,6 @@ let
         "swww-daemon"
         "swww img /home/akerman/.dotfiles/dotfiles-nix-akerman/wallpaper.png"
         "waybar"
-        "conky -c /home/akerman/.dotfiles/dotfiles-nix-akerman/conky.conf"
       ];
  
     };
