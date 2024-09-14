@@ -22,6 +22,8 @@
   keepassxc
   nodejs
  #filemanger super+o
+   hyprpicker
+   wl-clipboard
     gnome.nautilus
     yazi
     cava

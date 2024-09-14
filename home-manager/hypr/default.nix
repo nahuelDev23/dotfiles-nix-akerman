@@ -35,6 +35,7 @@ let
         "${modifier},Y,exec,firefox https://youtube.com/"   
         "${modifier},O,exec,nautilus" 
         "${modifier},K,exec,keepassxc" 
+        "${modifier},mouse:272,exec, hyprpicker -a"        
         # Window management
         "${modifier} SHIFT,Right, movewindow , r"
         "${modifier} SHIFT,Left, movewindow , l"
@@ -52,9 +53,9 @@ let
         "${modifier} SHIFT,3,movetoworkspace,3" # Move current window to workspace 3
         "${modifier} SHIFT,4,movetoworkspace,4" # Move current window to workspace 4
         "${modifier} SHIFT,5,movetoworkspace,5" # Move current window to workspace 5
-                 
+
         ];
-     
+          
       exec-once = [
         "swww-daemon"
         "swww img /home/akerman/.dotfiles/dotfiles-nix-akerman/wallpaper.png"
