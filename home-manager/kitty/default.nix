@@ -10,7 +10,8 @@ font = {
  size=16;
 };
 extraConfig ="
- background_opacity 0.7
+background #1F1F2F
+ background_opacity .7
 shell fish
 ";
 };

@@ -13,8 +13,8 @@ let
 
 
         border_size= 3;
-        "col.active_border"="rgb(F1E4CD) 60deg";
-
+        "col.active_border"="rgb(FFFD82) 60deg";
+       
         };
       decoration = {
         rounding = 7;
@@ -23,8 +23,8 @@ let
         shadow_render_power = 0;
         blur = {
           enabled = true;
-          size = 4;
-          passes = 2;
+          size = 7;
+          passes = 4;
         };
       };
       bind = [
@@ -54,6 +54,9 @@ let
         "${modifier} SHIFT,4,movetoworkspace,4" # Move current window to workspace 4
         "${modifier} SHIFT,5,movetoworkspace,5" # Move current window to workspace 5
 
+        ];
+        windowrulev2 =[
+          "opacity .9 override,class:^(discord)$"
         ];
           
       exec-once = [

@@ -1,5 +1,8 @@
-{pkgs,config,...}:{
-
+{pkgs,config,...}:
+let 
+colors = import ../../colors.nix;
+in{
+  
   home.file.".config/eww/eww.yuck".text = ''
   (defpoll bluetooth-devices :interval "1s"
   `bash ~/.dotfiles/dotfiles-nix-akerman/home-manager/eww/scripts/bt.sh`)
@@ -42,7 +45,7 @@
     padding:1rem;
     background-color: #1F1F2F;
     color: #F1E4CD;
-    border:3px solid  #F1E4CD;
+    border:3px solid  ${colors.primary_color};
     border-radius: 7px;
     font-size: 1rem;
   }
