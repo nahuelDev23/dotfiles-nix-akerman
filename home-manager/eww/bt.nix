@@ -2,7 +2,7 @@
 
   home.file.".config/eww/eww.yuck".text = ''
   (defpoll bluetooth-devices :interval "1s"
-  `bash ~/.dotfiles/dotfiles-nix-akerman/scripts/bt.sh`)
+  `bash ~/.dotfiles/dotfiles-nix-akerman/home-manager/eww/scripts/bt.sh`)
   (defwindow bluetooth-modal
            :monitor 1
            :geometry (geometry :x "16px"
