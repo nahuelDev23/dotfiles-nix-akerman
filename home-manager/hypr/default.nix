@@ -36,7 +36,10 @@ let
         "${modifier},O,exec,nautilus" 
         "${modifier},K,exec,keepassxc" 
         "${modifier},mouse:272,exec, hyprpicker -a"        
-        # Window management
+        "${modifier},W,exec, whatsapp-for-linux"        
+        "${modifier},P,exec,grim -g \"$(slurp)\" - | wl-copy"
+        "${modifier} SHIFT,P,exec,grim -g \"$(slurp)\" ~/Images/-$(date +'%Y-%m-%d_%H-%M-%S').png"
+        # Window managemenwhatsapp-for-linuxt
         "${modifier} SHIFT,Right, movewindow , r"
         "${modifier} SHIFT,Left, movewindow , l"
         "${modifier},Left, movefocus , l" # Move window to left

@@ -88,6 +88,7 @@ virtualisation.docker.rootless = {
     };
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List services that you want to enable:
+
 services.devmon.enable = true;
 services.gvfs.enable = true; 
 services.udisks2.enable = true;

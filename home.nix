@@ -1,4 +1,7 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+let
+colors = import ./colors.nix;
+in{
   # please change the username & home directory to your own
   home.username = "akerman";
   home.homeDirectory = "/home/akerman";
@@ -22,8 +25,11 @@
   keepassxc
   nodejs
  #filemanger super+o
+  grim 
+  slurp
    hyprpicker
    wl-clipboard
+   whatsapp-for-linux
     gnome.nautilus
     yazi
     cava
@@ -122,6 +128,18 @@ recursive=true;
     ";
   };
 
+services.mako ={
+
+    enable=true;
+    actions=true;
+    defaultTimeout=7000;
+    backgroundColor="#1F1F2F";
+    borderColor="#FFFD82";
+    borderRadius=7;
+    borderSize=3;
+    textColor="#FFFD82";
+    font="IosevkaTerm Nerd Font 10";
+  };
 
   # basic configuration of git, please change to your own
   programs.git = {
