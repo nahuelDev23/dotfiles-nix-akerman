@@ -6,3 +6,7 @@
 
 2. `udisksctl status ` ves los usb
 3. `sudo mount /dev/sdxxx media/mi-pen -t ntfs3`
+
+
+
+
