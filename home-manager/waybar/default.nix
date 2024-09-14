@@ -17,7 +17,7 @@ border_size = "2px"; in
         output = [ "DVI-I-1" "DP-2" ];
         modules-left = [ "clock" "custom/cava"];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = ["pulseaudio" "pulseaudio/slider"];
+        modules-right = ["pulseaudio" "pulseaudio/slider" "bluetooth"];
      "pulseaudio" = {
         format = " {icon}";
         "format-bluetooth" = "{volume}% ";  # <U+F294>
@@ -36,6 +36,14 @@ border_size = "2px"; in
            "default" = ["" ""];  # <U+F027>, <U+F028>
         };
      };
+      "bluetooth"= {
+        "format-on"= "󰂯";
+        "format-off"= "󰂲";
+        "format-disabled"= "";
+        "format-connected"= "󰂱  {device_alias}";
+        "tooltip-format-connected"= "{device_enumerate}";
+        "tooltip-format-enumerate-connected"= "{device_alias}\t{device_address}";
+    };
       "pulseaudio/slider"= {
       "min"= 0;
       "max"= 100;
@@ -98,7 +106,7 @@ margin:0px;
 margin-top:1rem;
 margin-right:1rem;
 
-padding:4px 16px;
+padding:4px;
 border-radius: ${border_radius};
 
 background:${primary_color};
@@ -138,6 +146,15 @@ margin-left:1rem;
 
   border-radius:7px;
 }
+#bluetooth{
+  background:${secondary_color};  
+  color:${primary_color};
+  margin-left:1rem;
+  padding:0 .5rem;
+  border-radius:${border_radius}/2;
+}
+
+
 #custom-cava {
     color:${primary_color};
     font-family: "bargraph";
