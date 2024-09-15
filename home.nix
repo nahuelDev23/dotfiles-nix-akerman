@@ -82,6 +82,7 @@ in{
     swww
     discord
     dbeaver-bin
+    vscode
   ] ;
 
 
