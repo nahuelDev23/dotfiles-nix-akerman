@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs,... }:
 let
 colors = import ./colors.nix;
 in{
@@ -83,10 +83,11 @@ in{
     discord
     dbeaver-bin
     vscode
-  ] ;
 
+    
+      ] ;
 
-
+ 
 programs.direnv = {
       enable = true;
       enableBashIntegration = true; # see note on other shells below
