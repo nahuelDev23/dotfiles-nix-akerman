@@ -17,7 +17,7 @@ in
         output = [ "DVI-I-1" "DP-2" ];
         modules-left = [ "clock" "custom/cava"];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = ["custom/memory-bar" "pulseaudio" "pulseaudio/slider" "bluetooth"];
+        modules-right = [ "pulseaudio" "pulseaudio/slider" "bluetooth"];
      "pulseaudio" = {
         format = " {icon}";
         "format-bluetooth" = "{volume}% ";  # <U+F294>
@@ -83,11 +83,7 @@ in
         };
 
 
-  "memory"= {
-    "interval"= 1;
-    "format"= "{}% ";
-    "max-length"=10;
-};
+
 
 "custom/cava"= {
     "exec"= "bash ~/.dotfiles/dotfiles-nix-akerman/home-manager/waybar/cava.sh";
@@ -95,35 +91,17 @@ in
 };
 
 
-"custom/memory"= {
-    "exec"="./memory_usage.sh";
-    "interval"= 5;
-    "format"= "{output}%";
-    "tooltip"="Memory Usage";
-    "max-length"= 100;
-};
 
-"custom/memory-bar"= {
-    "exec"= "~/.scripts/memory_usage.sh";
-    "interval"= 5;
-    "format"= "{output}";
-    "tooltip"= "Memory Usage";
-    "return-type"= "json";
-    "format-args"=["--min 0" "--max 100"];
-    "bar"= {
-        "show"=true;
-        "color"= "#ff0000";
-        "background"= "#cccccc"; 
-        "width"= 100;
-        "height"= 20;
-    };
-};
+
 
       };
     };
 
     style = ''
 
+#custom-mem {
+    font-family: "Sparks Dot-line Thick";
+}
       * {
         border: none;
         border-radius: 0;
