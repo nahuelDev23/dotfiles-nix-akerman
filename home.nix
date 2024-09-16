@@ -81,8 +81,8 @@ in{
     usbutils    # lsusb
     swww
     discord
-    dbeaver-bin
     vscode
+    beekeeper-studio
 
     
       ] ;
@@ -157,6 +157,7 @@ services.mako ={
         "yz" = "yazi";
       };
   };
+
 
   programs.zoxide = {
     enable = true;

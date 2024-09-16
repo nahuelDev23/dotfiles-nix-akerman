@@ -7,7 +7,7 @@ programs.kitty = {
   shellIntegration.enableFishIntegration = true;
 font = {
  name= "IosevkaTerm Nerd Font";
- size=16;
+ size=14;
 };
 extraConfig ="
 background #1F1F2F
