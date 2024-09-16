@@ -15,9 +15,9 @@ in
         position = "top";
         height = 30;
         output = [ "DVI-I-1" "DP-2" ];
-        modules-left = [ "clock" "custom/cava"];
+        modules-left = ["clock" "custom/cava"];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "pulseaudio" "pulseaudio/slider" "bluetooth"];
+        modules-right = ["pulseaudio" "pulseaudio/slider" "bluetooth"];
      "pulseaudio" = {
         format = " {icon}";
         "format-bluetooth" = "{volume}% ";  # <U+F294>
@@ -73,6 +73,8 @@ in
           };
         };
 
+
+
         "clock" = {
           interval = 60;
           format = "{:%d %b %H:%M}";
@@ -99,9 +101,7 @@ in
 
     style = ''
 
-#custom-mem {
-    font-family: "Sparks Dot-line Thick";
-}
+
       * {
         border: none;
         border-radius: 0;

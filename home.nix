@@ -79,10 +79,13 @@ in{
     ethtool
     pciutils    # lspci
     usbutils    # lsusb
+
+
     swww
     discord
     vscode
     beekeeper-studio
+    go
 
     
       ] ;
