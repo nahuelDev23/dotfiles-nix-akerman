@@ -142,7 +142,7 @@ services.mako ={
     textColor="#FFFD82";
     font="IosevkaTerm Nerd Font 10";
   };
-
+  programs.zathura.enable=true;
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
