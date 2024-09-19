@@ -156,7 +156,6 @@ services.mako ={
   programs.fish = {
     enable = true;
     shellAliases ={
-        "ls" = "eza -TL 2";
         "yz" = "yazi";
       };
   };
