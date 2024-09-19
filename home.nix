@@ -67,7 +67,7 @@ in{
     btop     # replacement of htop/nmon
     iotop    # io monitoring
     iftop    # network monitoring
-
+libreoffice-qt6-still
     # system call monitoring
     strace   # system call monitoring
     ltrace   # library call monitoring
@@ -79,10 +79,13 @@ in{
     ethtool
     pciutils    # lspci
     usbutils    # lsusb
+
+
     swww
     discord
-    dbeaver-bin
     vscode
+    beekeeper-studio
+    go
 
     
       ] ;
@@ -142,7 +145,7 @@ services.mako ={
     textColor="#FFFD82";
     font="IosevkaTerm Nerd Font 10";
   };
-
+  programs.zathura.enable=true;
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
@@ -153,10 +156,10 @@ services.mako ={
   programs.fish = {
     enable = true;
     shellAliases ={
-        "ls" = "eza -TL 2";
         "yz" = "yazi";
       };
   };
+
 
   programs.zoxide = {
     enable = true;
