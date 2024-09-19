@@ -67,7 +67,7 @@ in{
     btop     # replacement of htop/nmon
     iotop    # io monitoring
     iftop    # network monitoring
-
+libreoffice-qt6-still
     # system call monitoring
     strace   # system call monitoring
     ltrace   # library call monitoring
