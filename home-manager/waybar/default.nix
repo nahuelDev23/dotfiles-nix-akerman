@@ -151,7 +151,7 @@ margin-left:1rem;
 }
 #pulseaudio-slider trough {
 
-  background: #888888; 
+  background: #C0C0C0; 
 
   border-radius:7px;
 }
@@ -188,7 +188,7 @@ padding:4px 16px;
 
       #workspaces button {
         margin-right: 1rem;
-        color: #AAB2BF;
+        color: #C0C0C0;
         border-radius: 50%;
       }
 
