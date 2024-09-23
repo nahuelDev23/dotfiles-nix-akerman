@@ -17,7 +17,7 @@ in
         output = [ "DVI-I-1" "DP-2" ];
         modules-left = ["clock" "custom/cava"];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = ["pulseaudio" "pulseaudio/slider" "bluetooth"];
+        modules-right = ["memory" "cpu" "pulseaudio" "pulseaudio/slider" "bluetooth"];
      "pulseaudio" = {
         format = " {icon}";
         "format-bluetooth" = "{volume}% ";  # <U+F294>
@@ -92,7 +92,16 @@ in
     "format"="{}";
 };
 
+"cpu"= {
+	"interval"= 3;
+	"format"= "{}%";
+	"max-length"= 10;
+};
 
+"memory"={
+	"interval"= 3;
+	"format"= "{used:0.1f}G/{total:0.1f}G";
+};
 
 
 
@@ -129,7 +138,18 @@ margin-left:1rem;
 padding:4px 16px;
 border-radius: ${border_radius};
 }
+#cpu,
+#memory{
+ background:${colors.secondary_color};  
+  color:${colors.primary_color};
+  margin-left:1rem;
+  padding:0 .5rem;
+  border-radius:${border_radius}/2;
 
+}
+#memory {
+  margin-left:0rem;
+}
 #pulseaudio-slider{
 margin-left:1rem;
   background:transparent;
