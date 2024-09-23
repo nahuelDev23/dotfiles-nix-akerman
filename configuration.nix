@@ -9,10 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-      nixpkgs.overlays = [
-    (import ./home-manager/virtualization/vmware.nix)
-  ];
-
+     
   # Bootloader.
    boot.loader.systemd-boot.enable=true;
    boot.loader.efi.canTouchEfiVariables=true;
