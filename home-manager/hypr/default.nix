@@ -29,6 +29,7 @@ let
       };
       bind = [
         "${modifier},Q,killactive"
+        "${modifier},B, exec,hyprlock"
         "${modifier},D,exec,wofi --show drun"
         "${modifier},Return,exec,kitty"
         "${modifier},G,exec,firefox https://chat.openai.com/" # Open ChatGPT
