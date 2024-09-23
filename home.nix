@@ -24,6 +24,8 @@ in{
    eww
   keepassxc
   nodejs
+    google-chrome
+
  #filemanger super+o
   grim 
   slurp
