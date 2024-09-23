@@ -90,7 +90,6 @@ libreoffice-qt6-still
     
       ] ;
 
-  virtualisation.vmware.host.enable = true;
 
   programs.direnv = {
       enable = true;
