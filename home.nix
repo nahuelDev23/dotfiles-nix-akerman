@@ -21,6 +21,12 @@ in{
   };
   # Packages that should be installed to the user profile.
    home.packages = with pkgs; [
+   #docker - kubernetes
+    docker
+    docker-compose
+    kubectl
+    minikube
+
    eww
   keepassxc
   nodejs
@@ -35,8 +41,6 @@ in{
     gnome.nautilus
     yazi
     cava
-    docker
-    docker-compose
     networkmanagerapplet
     firefox
     vim
