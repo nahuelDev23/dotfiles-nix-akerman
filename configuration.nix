@@ -115,8 +115,8 @@ services.udisks2.enable = true;
   services.xserver.desktopManager.gnome.enable = false;
   services.xserver.displayManager.lightdm.enable = false;  # Activa SDDM
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22];
-  networking.firewall.allowedUDPPorts = [ 22];
+  networking.firewall.allowedTCPPorts = [ 22 80 30995 ];
+  networking.firewall.allowedUDPPorts = [ 22 80 30995 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
   #sound.enable=true;

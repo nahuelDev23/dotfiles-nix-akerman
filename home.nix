@@ -28,9 +28,9 @@ in{
     minikube
 
    eww
-  keepassxc
-  nodejs
-    google-chrome
+   keepassxc
+   nodejs
+  google-chrome
 
  #filemanger super+o
   grim 
@@ -78,6 +78,7 @@ libreoffice-qt6-still
     strace   # system call monitoring
     ltrace   # library call monitoring
     lsof     # list open files
+    typora
 
     # system tools
     sysstat
@@ -85,8 +86,8 @@ libreoffice-qt6-still
     ethtool
     pciutils    # lspci
     usbutils    # lsusb
-
-
+    obs-studio
+    vlc
     swww
     discord
     vscode
@@ -197,6 +198,8 @@ services.mako ={
     enable = true;
     shellAliases ={
         "yz" = "yazi";
+        "mk" = "minikube";
+        "k" = "kubectl";
       };
   };
 
