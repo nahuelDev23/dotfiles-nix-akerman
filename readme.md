@@ -1,3 +1,8 @@
+## cargar config
+ruta comun `sudo nixos-rebuild switch --flake .#akerman`
+```sh
+sudo nixos-rebuild switch --flake .#akerman
+```
 ## hacer hyprctl monitors y poner en waybar el monitor correspondiente
 
 ## montar usb 
